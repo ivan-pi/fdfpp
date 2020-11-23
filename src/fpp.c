@@ -16,6 +16,7 @@
 
 
 char	*progname = "fpp";	/* the name of the program */
+char    fpp_release[5];         /* This holds the version number, format "vX.Y" */
 
 static char	*filein;	/* name of input file*/
 static char	*fileout;	/* name of output file*/
@@ -183,11 +184,9 @@ main( int argc, char *argv[] ) {
 		fppmess(FERR_ARGS);
 	err_init(1);    /* and after     */
 
-	if (versionfl) {
+	sprintf (RELEASE, "v%s", VERSION);
 
-#ifndef RELEASE
-#define RELEASE ""
-#endif
+	if (versionfl) {
 		fppmess(MSG_PDVER, progname, RELEASE, __DATE__);
 	}
 

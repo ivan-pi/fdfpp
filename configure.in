@@ -1,0 +1,35 @@
+# Process this file with autoconf to produce a configure script.
+AC_INIT(fpp, 1.1, fpp-coordinator@sun.com)
+AC_PREREQ(2.14a)
+
+AM_INIT_AUTOMAKE(fpp, 1.1)
+
+AC_CONFIG_SRCDIR(src/fpp.c)
+
+# Checks for programs.
+#AM_PROG_LIBTOOL
+
+# AC_PROG_AWK
+AC_PROG_INSTALL
+AC_PROG_LN_S
+AC_PROG_RANLIB
+AC_PROG_YACC
+AC_PROG_MAKE_SET
+
+AC_PROG_CC
+AC_PROG_CC_C_O
+
+# Checks for libraries.
+
+# Checks for header files.
+AM_CONFIG_HEADER(src/config.h)
+#AC_CONFIG_HEADERS(src/config.h)
+
+# Checks for typedefs, structures, and compiler characteristics.
+AC_CHECK_TYPES(uchar)
+
+# Checks for library functions.
+
+# misc stuff
+
+AC_OUTPUT(Makefile src/Makefile)

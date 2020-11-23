@@ -1,0 +1,16 @@
+/* src/config.h.in.  Generated automatically from configure.in by autoheader.  */
+
+/* Define if the system has the type `uchar'. */
+#undef HAVE_UCHAR
+
+/* Define if your C compiler doesn't accept -c and -o together. */
+#undef NO_MINUS_C_MINUS_O
+
+/* Name of package */
+#undef PACKAGE
+
+/* Define if you have the ANSI C header files. */
+#undef STDC_HEADERS
+
+/* Version number of package */
+#undef VERSION

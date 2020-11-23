@@ -10,6 +10,14 @@
  * ====================================================
  */
 
+%{
+#include "fpp.h"
+#include "symtab.h"
+#include "rgram.h"
+#include "service.h"
+#include "sb.h"
+%}
+
 %term YYQWE YYCOLON 
 %term YYOR YYAND YYNOT YYEQV YYNEQV
 %term YYBITOR YYBITAND YYBITXOR YYBITNOT
@@ -77,13 +85,8 @@ term:	  YYSUB term = { $$ = -$2; }
 	| YYLPAR exp YYRPAR = { $$ = $2; }
 	| YYNUM = { $$ = $1; }
 %%
-#include "fpp.h"
-#include "symtab.h"
-#include "rgram.h"
-#include "service.h"
-#include "sb.h"
 
-void
+int
 yyerror( const char *s ) {
 	fppmess(ERR_IF,s);
 }

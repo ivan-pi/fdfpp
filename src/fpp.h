@@ -10,8 +10,12 @@
  * ====================================================
  */
 
+#include "config.h"
 #include <stdlib.h>
 #include <string.h>
+
+extern char fpp_release[5];
+#define RELEASE fpp_release
 
 #ifndef DEBUG
 #define DEBUG	0	/* DEBUG level */
@@ -63,7 +67,9 @@
 
 /************************************************************* Types */
 
+#ifndef HAVE_UCHAR
 typedef unsigned char uchar;
+#endif
 typedef unsigned int  wchar;
 
 typedef struct _token {

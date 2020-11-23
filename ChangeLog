@@ -1,0 +1,11 @@
+2000-07-11 Martin Wilck <martin@tropos.de>
+
+	* General: Add support for automake/autoconf, add missing files.
+
+	* src/eval.y: Move #includes to "C declarations" %{...%}
+	part to avoid error messages.
+	Change definition of yyerror to "int".
+	Use config.h to check for previous definition of "uchar".
+
+	*fpp.h: introduce char array for RELEASE.
+	*fpp.c: initialize RELEASE from VERSION.
